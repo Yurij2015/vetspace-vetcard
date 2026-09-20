@@ -1,0 +1,10 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Nuxt 4 (Vue 3), Tailwind CSS v4, TypeScript, @nuxtjs/i18n,
+  @nuxtjs/seo, Cloudflare Turnstile, Sentry, Vitest + Cypress.
+  Architecture: Public catalog + per-clinic booking portal.
+  SSR vs CSR: Catalog and clinic detail ([slug]) are SSR and SEO-critical.
+  Booking (appointment) and my-appointments are strictly client-only.
+  Multi-tenant: booking requests proxy to each clinic's own tenant backend,
+  resolved at runtime from the clinic payload.
